@@ -35,7 +35,7 @@
       width: 100%;
       max-width: 430px;
       min-height: 100vh;
-      padding: 24px 16px 150px; /* Am mărit puțin padding-ul de jos pentru checkbox */
+      padding: 24px 16px 130px;
       display: flex;
       flex-direction: column;
       gap: 22px;
@@ -56,28 +56,39 @@
     .f6 { animation: fadeUp .45s ease both 470ms; }
     .f7 { animation: fadeUp .45s ease both 560ms; }
 
-    /* ---- Header & Content ---- (Păstrate exact cum le aveai) */
+    /* ---- Header ---- */
     .header { display: flex; align-items: center; justify-content: space-between; }
     .logo-wrap { display: flex; align-items: center; gap: 8px; }
     .logo-img { width: 32px; height: 32px; border-radius: 9px; animation: logoGlow 2.5s ease-in-out infinite; object-fit: cover; }
     .logo-name { font-size: 18px; font-weight: 800; letter-spacing: -0.4px; }
+
     .timer { display: flex; align-items: center; gap: 5px; border: 1px solid var(--border); background: rgba(20,20,20,.7); border-radius: 99px; padding: 6px 12px; }
     .timer svg { width: 13px; height: 13px; stroke: var(--muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .timer-label { font-size: 11px; color: var(--muted); }
     .timer-time { font-size: 11px; font-weight: 800; color: var(--fg); animation: timerTick 1s step-end infinite; }
+
+    /* ---- Trust Badge ---- */
     .trust-wrap { display: flex; justify-content: center; }
     .trust-badge { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(44,199,110,.28); background: rgba(44,199,110,.09); border-radius: 99px; padding: 8px 16px; }
     .trust-badge svg { width: 13px; height: 13px; stroke: var(--green); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
     .trust-text { font-size: 11px; font-weight: 600; color: var(--green); }
+
+    /* ---- Hero ---- */
     .hero { text-align: center; display: flex; flex-direction: column; gap: 11px; }
     .hero h1 { font-size: 26px; font-weight: 900; line-height: 1.14; letter-spacing: -0.5px; }
     .hero h1 span { color: var(--green); }
     .hero p { font-size: 13px; color: var(--muted); line-height: 1.65; padding: 0 8px; }
+
+    /* ---- Pills ---- */
     .pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; }
     .pill { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); background: rgba(20,20,20,.5); border-radius: 99px; padding: 7px 12px; }
     .pill svg { width: 13px; height: 13px; stroke: var(--muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .pill span { font-size: 11px; font-weight: 600; color: var(--muted); }
+
+    /* ---- Section Labels ---- */
     .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
+
+    /* ---- Offer Cards ---- */
     .offers { display: flex; flex-direction: column; gap: 10px; }
     .offer-card { display: flex; align-items: center; gap: 12px; border: 1px solid var(--border); background: rgba(20,20,20,.5); border-radius: 16px; padding: 14px; cursor: pointer; transition: transform .12s, border-color .2s; -webkit-tap-highlight-color: transparent; }
     .offer-card:active { transform: scale(.975); }
@@ -94,6 +105,8 @@
     .star-row svg { width: 11px; height: 11px; fill: var(--star); }
     .star-row span { font-size: 11px; color: var(--muted); }
     .chevron-icon { width: 15px; height: 15px; flex-shrink: 0; stroke: var(--muted); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ---- Pro Tip ---- */
     .pro-tip { border: 1px solid rgba(44,199,110,.22); background: var(--card); border-radius: 16px; padding: 20px; position: relative; overflow: hidden; }
     .pro-tip::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--green), var(--star), var(--hot)); }
     .pro-left { display: flex; flex-direction: column; gap: 9px; }
@@ -102,23 +115,24 @@
     .pro-title { font-size: 17px; font-weight: 800; line-height: 1.25; }
     .pro-title .y { color: var(--star); }
     .pro-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    /* ---- How It Works ---- */
     .how-grid { display: flex; gap: 8px; }
     .how-card { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 7px; border: 1px solid var(--border); background: rgba(20,20,20,.5); border-radius: 12px; padding: 16px 10px; text-align: center; }
     .how-step { font-size: 17px; font-weight: 800; color: var(--green); }
     .how-card svg { width: 22px; height: 22px; stroke: var(--green); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .how-title { font-size: 12px; font-weight: 700; color: var(--fg); }
     .how-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    /* ---- Rating ---- */
     .rating { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 0; }
     .stars { display: flex; gap: 3px; }
     .stars svg { width: 20px; height: 20px; fill: var(--star); }
     .rating-text { font-size: 13px; color: var(--muted); }
     .rating-text strong { color: var(--fg); font-weight: 700; }
 
-    /* ---- Sticky CTA (Modificat pentru a include Checkbox-ul) ---- */
-    .sticky-cta { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; padding: 10px 16px 18px; background: linear-gradient(to top, var(--bg) 65%, transparent); z-index: 40; }
-    .age-check-wrapper { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; font-size: 12px; color: #aaa; cursor: pointer; }
-    .age-check-wrapper input { width: 16px; height: 16px; accent-color: var(--green); cursor: pointer; }
-    
+    /* ---- Sticky CTA ---- */
+    .sticky-cta { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; padding: 10px 16px 18px; background: linear-gradient(to top, var(--bg) 60%, transparent); z-index: 40; }
     .cta-btn { width: 100%; border: none; border-radius: 18px; background: var(--green); color: var(--green-fg); font-family: inherit; font-size: 17px; font-weight: 800; padding: 18px 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; animation: ctaPulse 2.5s ease-in-out infinite; -webkit-tap-highlight-color: transparent; transition: transform .1s; letter-spacing: -0.2px; user-select: none; -webkit-user-select: none; }
     .cta-btn:active { transform: scale(.96); }
     .cta-btn svg { width: 20px; height: 20px; stroke: #000; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
@@ -141,6 +155,7 @@
 <body>
 
   <div class="page">
+
     <!-- Header -->
     <div class="header f0">
       <div class="logo-wrap">
@@ -180,6 +195,7 @@
     <div class="f4" style="display:flex;flex-direction:column;gap:10px">
       <span class="section-label">Best Verdienende Games</span>
       <div class="offers">
+
         <div class="offer-card highlight" onclick="document.getElementById('openModalBtn').click()">
           <img src="assets/royal_match_logo.webp" alt="Royal Match" class="offer-img" width="48" height="48" fetchpriority="high"/>
           <div class="offer-info">
@@ -218,6 +234,7 @@
           </div>
           <svg class="chevron-icon" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
+
       </div>
     </div>
 
@@ -238,19 +255,19 @@
           <div class="how-step">1</div>
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <div class="how-title">Download App</div>
-          <div class="how-desc">Download FreeCash gratis uit de App Store.</div>
+          <div class="how-desc">Download FreeCash binnen enkele seconden gratis uit de App Store.</div>
         </div>
         <div class="how-card">
           <div class="how-step">2</div>
           <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
           <div class="how-title">Voltooi Games</div>
-          <div class="how-desc">Voltooi 2-3 games om hogere uitbetalingen te ontgrendelen.</div>
+          <div class="how-desc">Voltooi 2-3 snelle startgames om hogere uitbetalingen te ontgrendelen.</div>
         </div>
         <div class="how-card">
           <div class="how-step">3</div>
           <svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           <div class="how-title">Uitbetalen</div>
-          <div class="how-desc">Laat uitbetalen via PayPal, crypto of cadeaubonnen.</div>
+          <div class="how-desc">Laat uitbetalen via PayPal, bankoverschrijving, crypto of cadeaubonnen.</div>
         </div>
       </div>
     </div>
@@ -266,21 +283,18 @@
       </div>
       <div class="rating-text"><strong>4.7/5</strong> uit 270k+ reviews op Trustpilot</div>
     </div>
+
   </div>
 
-  <!-- Sticky CTA (Acum cu Age Gate integrat) -->
+  <!-- Sticky CTA (Fără checkbox, exact ca originalul) -->
   <div class="sticky-cta">
-    <label class="age-check-wrapper">
-      <input type="checkbox" id="ageCheck">
-      Ik bevestig dat ik 21 jaar of ouder ben
-    </label>
     <button class="cta-btn" id="openModalBtn" type="button">
       Downloaden & Aanmelden
       <svg viewBox="0 0 24 24"><polyline points="5 12 19 12"/><polyline points="12 5 19 12 12 19"/></svg>
     </button>
   </div>
 
-  <!-- Modal (Pop-up) -->
+  <!-- Modal cu Auto-Redirect -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" role="dialog">
       <button class="modal-close" id="modalClose" aria-label="Close">
@@ -290,7 +304,6 @@
       <h2>Begin met <span>2-3 Snelle Games</span></h2>
       <p class="modal-body">Voltooi na het aanmelden een paar startgames om beter betalende aanbiedingen te ontgrendelen en je inkomsten op FreeCash te maximaliseren.</p>
       
-      <!-- Butonul din modal, care se va schimba vizual -->
       <div class="modal-cta" id="autoRedirectBtn">
         Doorverwijzen...
       </div>
@@ -324,28 +337,20 @@
       renderTimer();
       setInterval(function () { if (seconds > 0) { seconds--; renderTimer(); } }, 1000);
 
-      // ---- Elemente Modal și Age Check ----
+      // ---- Modal cu Auto-Redirect ----
       var modalOverlay = document.getElementById('modalOverlay');
       var openModalBtn = document.getElementById('openModalBtn');
       var modalClose = document.getElementById('modalClose');
-      var ageCheck = document.getElementById('ageCheck');
       var autoRedirectBtn = document.getElementById('autoRedirectBtn');
       var redirectInterval;
 
-      // Când dă click pe "Download"
       openModalBtn.addEventListener('click', function () {
-        // 1. Verificăm dacă a bifat căsuța de 21+
-        if (!ageCheck.checked) {
-          alert("Vink aan dat je 21 jaar of ouder bent om door te gaan."); // Alertă în olandeză
-          return; // Oprim procesul aici dacă nu a bifat
-        }
-
-        // 2. Dacă a bifat, deschidem modalul
+        // Deschidem modalul
         modalOverlay.classList.add('open');
         document.body.style.overflow = 'hidden';
 
-        // 3. Pornim auto-redirectul
-        var countdown = 3; // 3 secunde
+        // Setăm timer-ul vizual pentru redirect
+        var countdown = 3; 
         autoRedirectBtn.innerHTML = 'Doorverwijzen in ' + countdown + '...';
         
         redirectInterval = setInterval(function() {
@@ -354,16 +359,15 @@
             autoRedirectBtn.innerHTML = 'Doorverwijzen in ' + countdown + '...';
           } else {
             clearInterval(redirectInterval);
-            window.location.href = buildClickURL(); // Redirect automat către rețeaua ta
+            window.location.href = buildClickURL(); // Redirect către Taprkr
           }
         }, 1000);
       });
 
-      // ---- Opțiune de închidere Modal (în caz că se răzgândește rapid) ----
       function closeModal() {
         modalOverlay.classList.remove('open');
         document.body.style.overflow = '';
-        if(redirectInterval) clearInterval(redirectInterval); // Oprim redirectul dacă închide pop-up-ul
+        if(redirectInterval) clearInterval(redirectInterval); // Anulăm redirect-ul dacă a închis fereastra
       }
 
       modalClose.addEventListener('click', closeModal);
