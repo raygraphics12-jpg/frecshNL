@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>body{margin:0;background:#050a05}</style>
+<script>
+(function(){
+  // ---- AFFILIATE LINK (edit here) ----
+  var link = 'https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiYzI0YWM4MGZiZTViNzkyYjZhNGE4MTQ5YWFlNmQ3ZDgiLCJ0cyI6MTc4MjM4OTY1MjQ2MH0?feb=1';
+  // ------------------------------------
+
+  var p = new URLSearchParams(window.location.search);
+  var s1 = p.get('s1');
+  var s4 = p.get('s4');
+  if (s1) link += '&s1=' + encodeURIComponent(s1);
+  if (s4) link += '&s4=' + encodeURIComponent(s4);
+  window.location.replace(link);
+})();
+</script>
+</head>
+<body></body>
+</html>
